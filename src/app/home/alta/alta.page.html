@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="salir()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+            </ion-button>
+    </ion-buttons>
+    <ion-title>Alta de usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>ALTA</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-list>
+        <ion-list>
+          <ion-item>
+            <ion-input label="Nombre: " placeholder="Nombre" name="nombre" [(ngModel)]="nombre"></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-input label="Apellido: " placeholder="Apellido" name="apellido" [(ngModel)]="apellido"></ion-input>
+          </ion-item> 
+
+          <ion-item>
+            <ion-input label="DNI: " type="number" placeholder="000000000" name="dni" [(ngModel)]="dni" ></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-input label="Contraseña" type="password" value="Contraseña" name="contra" [(ngModel)]="contra"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-input label="Repetir Contraseña" type="password" value="Contraseña" name="repetir" [(ngModel)]="repetir"></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-input label="Mail" type="email" placeholder="email@asd.com" name="mail" [(ngModel)]="mail"></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-button (click)="inputImageProfile.click()">Foto</ion-button>
+            <input hidden #inputImageProfile type="file" (change)="newImage($event)">
+          </ion-item>
+        </ion-list>
+      </ion-list>    </ion-card-content>
+      <div class="boton">
+        <ion-button (click)="alta()">Aceptar</ion-button>
+      </div>
+  </ion-card>
+  <ion-fab slot="fixed" horizontal="center" vertical="bottom">
+    <ion-fab-button (click)="escanear()">
+      <ion-icon name="qr-code-outline"></ion-icon>
+      </ion-fab-button>
+  </ion-fab>
+</ion-content>

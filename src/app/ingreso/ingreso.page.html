@@ -1,0 +1,58 @@
+
+<ion-content>
+  <ion-grid>
+    <ion-card class="ion-cards">
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="12" size-lg="12" size-xs="12">
+          <div class="text-center d-flex align-items-center justify-content-center">
+              <img src="../../assets/logo.png" alt="" class="img-fluid custom-img-size">
+            </div>
+        </ion-col>
+          <ion-col align-self-center size-md="12" size-lg="12" size-xs="12"> 
+              <ion-input label="Correo" fill="outline" name="email" type="email" placeholder="your@email.com" [(ngModel)]="usuario" name="usuario"></ion-input>
+              <ion-input label="Contraseña" fill="outline"name="password" type="password" placeholder="Password" [(ngModel)]="pass" name="pass"></ion-input>
+          </ion-col>
+        <ion-col class="botones" align-self-center size-md="12" size-lg="12" size-xs="12"> 
+          <ion-button   type="submit" (click)="login()" expand="">Ingresar</ion-button>
+          <ion-button  type="submit" (click)="salir()" expand="">Salir</ion-button>     
+        </ion-col>
+      </ion-row>
+
+      
+      </ion-card>
+      <ion-menu contentId="main-content">
+        <ion-header>
+          <ion-toolbar>
+            <ion-title>Usuarios</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-menu-toggle>
+            <ion-list lines="none">
+              <ion-item button="true" detail="false" (click)="Autocompletar('admin@admin.com','111111')">
+                <ion-label class="text">Admin</ion-label>
+              </ion-item>
+              <ion-item button="true" detail="false" (click)="Autocompletar('usuario@usuario.com','333333') " >
+                <ion-label class="text">Usuario</ion-label>
+              </ion-item>
+              <ion-item button="true" detail="false" (click)="Autocompletar('invitado@invitado.com','222222')">
+                <ion-label class="text">Invitado</ion-label>
+              </ion-item>
+              <ion-item button="true" detail="false" (click)="Autocompletar('tester@tester.com','555555')">
+                <ion-label class="text">Tester</ion-label>
+              </ion-item>
+              <ion-item button="true" detail="false" (click)="Autocompletar('anonimo@anonimo.com','444444')">
+                <ion-label class="text">Anonimo</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-menu-toggle>
+        </ion-content>
+      </ion-menu>
+      <div id="main-content">
+        <ion-menu-toggle>
+          <ion-button  type="submit"  expand="">Usuarios</ion-button>       
+        </ion-menu-toggle>
+      </div>     
+  </ion-grid>
+</ion-content>
+

@@ -1,0 +1,14 @@
+.boton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@import url('https://fonts.cdnfonts.com/css/bukhari-script');
+ion-title, ion-card-title , ion-card-subtitle, ion-card-content, ion-input, ion-button {
+    font-family: 'Bukhari Script', sans-serif;
+}
+
+ion-toolbar{
+    --background: #5271ff
+}

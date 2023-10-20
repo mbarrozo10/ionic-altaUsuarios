@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-button (click)="logout()">
+          <ion-icon slot="icon-only" name="log-out"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    <ion-title>Bienvenido!</ion-title>
+    <ion-buttons slot="end">
+        <ion-button (click)="Alta()">
+            <ion-icon name="add-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let x of usuarios">
+  <ion-card>
+    <img alt="Silhouette of mountains" [src]="x.img" />
+    <ion-card-header>
+      <ion-card-title>{{x.nombre}} {{x.apellido}}</ion-card-title>
+      <ion-card-subtitle>{{x.mail}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+    Dni: {{x.dni}}
+    </ion-card-content>
+  </ion-card>
+</div>
+</ion-content>
